@@ -5,9 +5,17 @@
         margin-right: -65px; /* Will counteract right padding */
     }
 
+    &--gutters-large {
+        margin-right: -100px;
+    }
+
     &--gutters > div { /* To select all of its direct children */
         padding-right: 65px;
         box-sizing: border-box; /* Browser will still honor the column percentage */
+    }
+
+    &--gutters-large > div { /* To select all of its direct children */
+        padding-right: 100px;
     }
 
     &__b-margin-until-md {
@@ -27,6 +35,11 @@
 
         &__col-md-4--larger {
             width: 37%;
+        }
+
+        &__col-md-6 {
+            float: left;
+            width: 50%;
         }
     
         &__col-md-8 {
