@@ -2,12 +2,18 @@
 @import "normalize.css";
 
 /* IMPORTED GLOBAL styles */
+@import "base/_variables"; /* Variables always first */
 @import "base/_global";
-@import "base/_variables";
+@import "base/_mixins";
 
 /* IMPORTED MODULES styles */
 @import "modules/_btn";
+@import "modules/_headline";
 @import "modules/_large-hero";
+@import "modules/_page-section";
+@import "modules/_generic-content-container";
+@import "modules/_row";
+@import "modules/_wrapper";
 
 
 

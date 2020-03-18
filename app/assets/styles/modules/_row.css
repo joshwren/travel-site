@@ -1,0 +1,43 @@
+.row {
+    @mixin clearfix;
+
+    &--gutters { 
+        margin-right: -65px; /* Will counteract right padding */
+    }
+
+    &--gutters > div { /* To select all of its direct children */
+        padding-right: 65px;
+        box-sizing: border-box; /* Browser will still honor the column percentage */
+    }
+
+    &__b-margin-until-md {
+        margin-bottom: 1rem;
+    }
+
+    @mixin atMedium {
+
+        &__b-margin-until-md {
+            margin-bottom: 0;
+        }
+
+        &__col-md-4 {
+            float: left;
+            width: 33.33%;/* Each of the 12 columns is 8.333% */
+        }
+
+        &__col-md-4--larger {
+            width: 37%;
+        }
+    
+        &__col-md-8 {
+            float: left;
+            width: 66.66%;/* Each of the 12 columns is 8.333% */
+        }
+
+        &__col-md-8--smaller {
+            width: 63%;
+        }
+    }
+
+    
+}

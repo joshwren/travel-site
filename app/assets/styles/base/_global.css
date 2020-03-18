@@ -8,3 +8,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+* { /* Selects every element on the page */
+    box-sizing: border-box; /* Browser will still honor the column percentage */
+}
+
+a {
+    color: $mainOrange;
+}
