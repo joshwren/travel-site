@@ -1,12 +1,20 @@
 .row {
     @mixin clearfix;
 
+    &--t-padding {
+        padding-top: 80px;
+    }
+
     &--gutters { 
         margin-right: -65px; /* Will counteract right padding */
     }
 
     &--gutters-large {
         margin-right: -100px;
+    }
+
+    &--gutters-small {
+        mrgin-right: -45px;
     }
 
     &--gutters > div { /* To select all of its direct children */
@@ -16,6 +24,10 @@
 
     &--gutters-large > div { /* To select all of its direct children */
         padding-right: 100px;
+    }
+
+    &--gutters-small > div { /* To select all of its direct children */
+        padding-right: 45px;
     }
 
     &__b-margin-until-md {
@@ -52,5 +64,56 @@
         }
     }
 
+    @mixin atLarge {
+
+        &__b-margin-until-lg {
+            margin-bottom: 0;
+        }
+
+        &__col-lg-4 {
+            float: left;
+            width: 33.33%;/* Each of the 12 columns is 8.333% */
+        }
+
+        &__col-lg-4--larger {
+            width: 37%;
+        }
+
+        &__col-lg-6 {
+            float: left;
+            width: 50%;
+        }
     
+        &__col-lg-8 {
+            float: left;
+            width: 66.66%;/* Each of the 12 columns is 8.333% */
+        }
+
+        &__col-lg-8--smaller {
+            width: 63%;
+        }
+    }
+
+    /* Begin equal height rules */
+    &--equal-height-at-md {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
+    &--equal-height-at-lg {
+        @mixin atLarge {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
 }
