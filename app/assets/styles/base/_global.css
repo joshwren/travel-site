@@ -1,4 +1,8 @@
 /* GLOBAL styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
